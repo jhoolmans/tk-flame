@@ -359,7 +359,7 @@ class FlameLoaderActions(HookBaseClass):
         :return: Media path root
         :type: str
         """
-        return os.environ.get("SHOTGUN_FLAME_MEDIA_PATH_ROOT", "")
+        return os.environ.get("SHOTGUN_FLAME_MEDIA_PATH_ROOT", self.parent.get_setting("media_path_root", ""))
 
     @property
     def media_path_pattern(self):
